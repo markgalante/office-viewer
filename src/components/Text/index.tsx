@@ -3,6 +3,7 @@ import './styles.css'
 
 type TextProps = {
   type?: TextTypes;
+  center?: boolean;
   children: React.ReactNode;
 };
 
@@ -12,12 +13,14 @@ type TextTypes =
 
 function Text({
   type = 'default',
-  children
+  children,
+  center = false,
 }: TextProps){
   return (
     <p
       className={[
-        type
+        type,
+        center ? 'center' : ''
       ].join(' ')}
     >
       {children}

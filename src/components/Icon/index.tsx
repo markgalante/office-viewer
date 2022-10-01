@@ -5,10 +5,14 @@ import type {
 } from './types';
 
 function Icon({
+  onClick,
   ...props
 }: IconProps){
   return (
-    <div className='icon-container'>
+    <div
+      className='icon-container'
+      onClick={onClick ?? undefined}
+    >
       <IconRenderer {...props} />
     </div>
   )

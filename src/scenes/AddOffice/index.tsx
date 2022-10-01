@@ -6,9 +6,11 @@ import {
 
 function AddOffice(){
   return (
-    <div>
-      <Icon name='back' size={30} />
-      <Text type='sub-heading'>New Office</Text>
+    <div style={{display: 'flex', alignItems:'center'}}>
+      <Icon name='back' size={50} />
+      <div style={{width: '100%'}}>
+      <Text center type='sub-heading'>New Office</Text>
+      </div>
     </div>
   );
 };
