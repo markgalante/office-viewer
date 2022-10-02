@@ -1,10 +1,13 @@
-
+import * as React from 'react';
 import {
   collection, addDoc,
 } from 'firebase/firestore';
 import {
   firestore
 } from '../../../../../config';
+import {
+  useOverlay
+} from '../../../../../hooks';
 import {
   useMutation,
 } from '@tanstack/react-query';
@@ -26,6 +29,7 @@ type UseAddOfficeResult = {
 }
 
 export function useAddOffice(): UseAddOfficeResult{
+  const {showOverlay, hideOverlay} = useOverlay();
   const mutation = useMutation<
     any, 
     any, 
@@ -34,10 +38,14 @@ export function useAddOffice(): UseAddOfficeResult{
     >(office => handleAddOffice(office), {
       onError: () => {
         console.error('Error creating office');
+        hideOverlay();
       },
       onSuccess: () => {
-        console.log('Success creating office');
+        hideOverlay();
       },
+      onMutate: () => {
+        showOverlay();
+      }
     });
   const addOffice = (office: OfficeType) => {
     return mutation.mutateAsync(office)
