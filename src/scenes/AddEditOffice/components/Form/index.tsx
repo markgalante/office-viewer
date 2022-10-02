@@ -8,7 +8,7 @@ import {
   Flex,
   Text,
 } from '../../../../components';
-
+import type {UseOfficeInfoResult} from '../../hooks';
 import ColorThemePicker from '../ColorThemePicker';
 
 import type {OfficeColorType} from '../../../../hooks/types';
@@ -33,36 +33,67 @@ const colorThemes: Array<OfficeColorType> = [
   '#8338EC'
 ];
 
-function Form(){
-  console.log(colorThemes);
+export type FormProps = 
+  UseOfficeInfoResult & {
+    handleSubmit: () => void;
+  };
+
+function Form({
+  officeInfo,
+  setColor,
+  setEmailAddress,
+  setMaxCapacity,
+  setOfficeAddress,
+  setOfficeName,
+  setPhoneNumber,
+  handleSubmit,
+}: FormProps){
+  const {
+    address,
+    emailAddress,
+    name,
+    officeColor,
+    phoneNumber,
+    maximumCapacity,
+  } = officeInfo;
   return (
     <div>
       <TextField 
         id='outlined-basic'
         label='Office Name'
+        value={name}
+        onChange={setOfficeName}
         {...commonTextFieldProps}
       />
       <TextField 
         id='outlined-basic'
         label='Physical Address'
+        value={address}
+        onChange={setOfficeAddress}
         {...commonTextFieldProps}
       />
       <TextField 
         id='outlined-basic'
         label='Email Address'
         type='email'
+        value={emailAddress}
+        onChange={setEmailAddress}
         {...commonTextFieldProps}
       />
       <TextField 
         id='outlined-basic'
         label='Phone Number'
         type='tel'
+        value={phoneNumber}
+        onChange={setPhoneNumber}
         {...commonTextFieldProps}
       />
       <TextField 
         id='outlined-basic'
         label='Maximum Capacity'
         type='number'
+        onChange={setMaxCapacity}
+        value={maximumCapacity}
         {...commonTextFieldProps}
       />
       <Text type='section-header'>Office Colour</Text>
@@ -73,13 +104,18 @@ function Form(){
       >
       {
         colorThemes.map(colorTheme => (
-          <ColorThemePicker color={colorTheme} />
+          <ColorThemePicker
+            color={colorTheme}
+            setColor={setColor}
+            selectedColor={officeColor}  
+          />
         ))
       }
       </Flex>
       <Flex justify='center'>
       <button
         className='add-office-button'
+        onClick={handleSubmit}
       >
         Add office
       </button>

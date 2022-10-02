@@ -1,16 +1,5 @@
-import * as React from 'react';
-import {
-  Header,
-  Form,
-} from './components';
+import AddOffice from './AddOffice';
 
-function AddOffice(){
-  return (
-    <>
-      <Header />
-      <Form />  
-    </>
-  );
-};
-
-export default AddOffice;
+export {
+  AddOffice,
+}
