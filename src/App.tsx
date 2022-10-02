@@ -1,11 +1,20 @@
 import React from 'react';
+import {
+  QueryClient,
+  QueryClientProvider
+} from '@tanstack/react-query';
+
 import './App.css';
-import AddEditOffice from './scenes/AddEditOffice';
+import {AddOffice} from './scenes/AddEditOffice';
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
     <div id='app-container'>
-      <AddEditOffice />
+      <QueryClientProvider client={queryClient}>
+        <AddOffice />
+      </QueryClientProvider>
     </div>
   );
 }
