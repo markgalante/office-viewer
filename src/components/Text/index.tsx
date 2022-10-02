@@ -10,6 +10,7 @@ type TextProps = {
 type TextTypes =
   | 'default'
   | 'sub-heading'
+  | 'section-header'
 
 function Text({
   type = 'default',

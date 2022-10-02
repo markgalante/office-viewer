@@ -41,6 +41,11 @@
   font-family: inter-400;
 }
 
+.section-header{
+  font-family: inter-600;
+  font-size: 2.3em;
+}
+
 .sub-heading {
   font-family: inter-500, sans-serif;
   font-size: 2em;
