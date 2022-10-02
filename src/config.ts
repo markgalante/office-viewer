@@ -21,7 +21,6 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-console.log('APP INITIALISED', app)
 export const database = getDatabase(app);
 export const analytics = getAnalytics(app);
 export const firestore = getFirestore(app);
