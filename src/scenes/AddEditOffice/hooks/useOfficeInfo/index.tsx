@@ -2,7 +2,7 @@ import * as React from 'react';
 import type {
   OfficeType,
   OfficeColorType
-} from '../../../../hooks';
+} from '../../types';
 
 export type UseOfficeInfoResult = {
   officeInfo: OfficeType,

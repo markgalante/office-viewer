@@ -11,7 +11,7 @@ import {
 import type {UseOfficeInfoResult} from '../../hooks';
 import ColorThemePicker from '../ColorThemePicker';
 
-import type {OfficeColorType} from '../../../../hooks/types';
+import type {OfficeColorType} from '../../types';
 
 const commonTextFieldProps: BaseTextFieldProps = {
   variant:'outlined',

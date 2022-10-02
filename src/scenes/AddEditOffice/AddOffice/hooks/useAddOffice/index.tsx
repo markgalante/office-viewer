@@ -8,7 +8,7 @@ import {
 import {
   useMutation,
 } from '@tanstack/react-query';
-import {OfficeType} from '../../../../../hooks/types';
+import {OfficeType} from '../../../types';
 
 function handleAddOffice(office: OfficeType){
   return addDoc(

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import type {OfficeColorType} from '../../../../hooks';
+import type {OfficeColorType} from '../../types';
 
 type ColorThemePickerProps = {
   color: OfficeColorType;
