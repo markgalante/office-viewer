@@ -1,0 +1,15 @@
+.add-button{
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  background: #0D4477;
+  outline: none;
+  border: none;
+  position: fixed;
+  bottom: 17px;
+  right: 17px;
+}
+
+.add-button:active{
+  background: #368dde;
+}

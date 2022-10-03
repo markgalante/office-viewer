@@ -1,11 +1,11 @@
-import Icon from './Icon';
 import Text from './Text';
 import Divider from './Divider';
 
+export * from './Icon';
 export * from './Layouts';
 export * from './Icon/types';
+export * from './AddButton';
 export {
-  Icon,
   Text,
   Divider,
 }

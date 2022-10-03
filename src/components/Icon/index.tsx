@@ -4,7 +4,7 @@ import type {
   IconProps,
 } from './types';
 
-function Icon({
+export function Icon({
   onClick,
   className = '',
   ...props
@@ -20,4 +20,3 @@ function Icon({
 };
 
 export * from './types';
-export default Icon;

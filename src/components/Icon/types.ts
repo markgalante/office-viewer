@@ -12,6 +12,7 @@ export type IconProps = {
 }
 
 export type IconNames = 
+  | 'add'
   | 'arrow-down'
   | 'arrow-up'
   | 'back'
