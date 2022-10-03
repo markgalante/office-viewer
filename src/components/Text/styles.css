@@ -37,13 +37,18 @@
   src: url('./font/Inter/static/Inter-Black.ttf');
 }
 
+.standard-font-style{
+  margin: 0.2em 0;
+}
+
 .default {
-  font-family: inter-400;
+  font-family: inter-400, sans-serif;
+  font-size: 12px
 }
 
 .section-header{
-  font-family: inter-600;
-  font-size: 2.3em;
+  font-family: inter-600, sans-serif;
+  font-size: 28px;
 }
 
 .sub-heading {
@@ -51,6 +56,19 @@
   font-size: 2em;
 }
 
+.bold-heading {
+  font-family: inter-800, sans-serif;
+  font-size: 1.4em;
+}
+
 .center {
+  text-align: center;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-center {
   text-align: center;
 }
