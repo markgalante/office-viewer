@@ -6,11 +6,12 @@ import type {
 
 function Icon({
   onClick,
+  className = '',
   ...props
 }: IconProps){
   return (
     <div
-      className='icon-container'
+      className={`icon-container ${className}`}
       onClick={onClick ?? undefined}
     >
       <IconRenderer {...props} />
@@ -18,4 +19,5 @@ function Icon({
   )
 };
 
+export * from './types';
 export default Icon;

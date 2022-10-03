@@ -1,0 +1,47 @@
+.main-card-container {
+  width: 342px;
+  position: relative;
+  overflow: auto;
+  border: 1px solid #E8F3FC;
+}
+
+.card-color-container {
+  width: 157.85px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.card-info-container{
+  width: 328px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  background: #E8F3FC;
+}
+
+.card-height {
+  height: 132px;
+}
+
+.card-height-expanded {
+  height: 320px;
+}
+
+.radius-8 {
+  border-radius: 8px;
+}
+
+.inner-card-info-container {
+  padding: 5px 15px;
+  gap: 10px
+}
+
+.bold-text{
+  font-weight: bold;
+}
+
+.left-margin{
+  margin-left: 10px;
+}
