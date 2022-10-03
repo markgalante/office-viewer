@@ -8,7 +8,16 @@ export type IconProps = {
   name: IconNames;
   onClick?: React.MouseEventHandler<HTMLDivElement> 
   size?: number;
+  className?: string;
 }
 
 export type IconNames = 
-  | 'back';
+  | 'arrow-down'
+  | 'arrow-up'
+  | 'back'
+  | 'edit'
+  | 'email'
+  | 'location-pin'
+  | 'people'
+  | 'people-present'
+  | 'phone';
