@@ -1,10 +1,10 @@
 import * as React from 'react';
 import './styles.css';
 import BasicCompanyInfo from './components/BasicCompanyInfo'
-import type {OfficeType} from '../../../AddEditOffice/types';
+import type {ReturnType} from '../../hooks';
 
 type CompanyCardType = {
-  officeInfo: OfficeType
+  officeInfo: ReturnType
 }
 
 function CompanyCard({

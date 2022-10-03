@@ -29,7 +29,7 @@ async function handleViewOfficeCollections(){
   }
 };
 
-type ReturnType = OfficeType & {
+export type ReturnType = OfficeType & {
   id: string
 }
 

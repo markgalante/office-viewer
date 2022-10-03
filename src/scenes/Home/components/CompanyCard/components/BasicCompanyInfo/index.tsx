@@ -6,6 +6,7 @@ import {
 import type {
   OfficeType,
 } from '../../../../../AddEditOffice/types';
+import  {ReturnType} from '../../../../hooks/'
 import ExpandCompressActions from '../ExpandCompressActions';
 import NameAndEdit from '../NameAndEdit';
 import PeoplePresent from '../PeoplePresent';
@@ -16,7 +17,7 @@ type BasicCompanyInfoProps = {
   heightClassName: string;
   onExpandCompressClick: () => void;
   isExpanded: boolean;
-  office: OfficeType;
+  office: ReturnType;
 }
 
 function BasicCompanyInfo({
@@ -36,6 +37,7 @@ function BasicCompanyInfo({
   >
     <NameAndEdit 
       companyName={companyName}
+      officeId={office.id}
       onEditPress={() => console.log('EDIT PRESS')}
     />
     <PeoplePresent peoplePresent={5} />

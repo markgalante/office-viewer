@@ -11,7 +11,7 @@ import {
 import {
   useMutation,
 } from '@tanstack/react-query';
-import {OfficeType} from '../../../types';
+import type {OfficeType} from '../../../types';
 
 function handleAddOffice(office: OfficeType){
   return addDoc(
@@ -40,7 +40,8 @@ export function useAddOffice(): UseAddOfficeResult{
         console.error('Error creating office');
         hideOverlay();
       },
-      onSuccess: () => {
+      onSuccess: (res, variables) => {
+        console.log(res, variables);
         hideOverlay();
       },
       onMutate: () => {
