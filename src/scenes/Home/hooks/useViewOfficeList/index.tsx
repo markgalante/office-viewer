@@ -22,15 +22,19 @@ async function handleViewOfficeCollections(){
         'office'
       )
     );
-    const offices = querySnapshot.docs.map(doc => doc.data());
+    const offices = querySnapshot.docs.map(doc => ({...doc.data(), id: doc.id}));
     return offices;
   } catch (error) {
     return error;
   }
 };
 
+type ReturnType = OfficeType & {
+  id: string
+}
+
 type UseViewOfficeListResult = {
-  data: Array<OfficeType> | undefined;
+  data: Array<ReturnType> | undefined;
   status: 'error' | 'success' | 'loading'
   error: any;
   refetch: () => void;
@@ -42,7 +46,7 @@ export function useViewOfficeList(): UseViewOfficeListResult{
     status,
     error,
     refetch,
-  } = useQuery<any,unknown, Array<OfficeType>, any>([VIEW_OFFICE_LIST_QUERY], handleViewOfficeCollections);
+  } = useQuery<any,unknown, Array<ReturnType>, any>([VIEW_OFFICE_LIST_QUERY], handleViewOfficeCollections);
   return {
     data,
     status,
