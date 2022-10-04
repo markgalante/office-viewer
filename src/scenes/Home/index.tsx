@@ -10,7 +10,7 @@ export function Home(){
   return (
     <>
       <Flex flexDirection='column' gap={20} alignItems='center' style={{marginTop: 15}}>
-        <Text type='section-header' textAlign='align-left'>All Offices</Text>
+        <Text type='screen-header' textAlign='align-left'>All Offices</Text>
           {
             data?.map(company => (
               (
