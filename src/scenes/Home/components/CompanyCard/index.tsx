@@ -14,24 +14,22 @@ function CompanyCard({
   const expandOrCompressCard = () => {
     setIsExpanded(state => !state);
   };
+  const backgroundColorStyles: React.CSSProperties = {
+    background: officeInfo.officeColor,
+  }
   const cardHeightClass = isExpanded ? 'card-height-expanded' : 'card-height';
   return (
     <div
       className={`main-card-container ${cardHeightClass} radius-8`}
-      style={{
-        background: officeInfo.officeColor,
-      }}
+      style={backgroundColorStyles}
     >
       <div
         className={`card-color-container ${cardHeightClass} radius-8`}
-        style={{
-          background: officeInfo.officeColor,
-        }}
+        style={backgroundColorStyles}
       ></div>
     <BasicCompanyInfo
       office={officeInfo}
       onExpandCompressClick={expandOrCompressCard}
-      companyName={officeInfo.name}
       isExpanded={isExpanded}
       heightClassName={cardHeightClass}
     />
