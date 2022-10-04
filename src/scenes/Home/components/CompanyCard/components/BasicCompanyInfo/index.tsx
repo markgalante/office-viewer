@@ -3,10 +3,7 @@ import {
   Flex,
   Divider,
 } from '../../../../../../components';
-import type {
-  OfficeType,
-} from '../../../../../AddEditOffice/types';
-import  {ReturnType} from '../../../../hooks/'
+import {ReturnType as ReturnOfficeType} from '../../../../hooks/'
 import ExpandCompressActions from '../ExpandCompressActions';
 import NameAndEdit from '../NameAndEdit';
 import PeoplePresent from '../PeoplePresent';
@@ -17,7 +14,7 @@ type BasicCompanyInfoProps = {
   heightClassName: string;
   onExpandCompressClick: () => void;
   isExpanded: boolean;
-  office: ReturnType;
+  office: ReturnOfficeType;
 }
 
 function BasicCompanyInfo({
@@ -38,7 +35,7 @@ function BasicCompanyInfo({
     <NameAndEdit 
       companyName={companyName}
       officeId={office.id}
-      onEditPress={() => console.log('EDIT PRESS')}
+      onEditPress={() => null}
     />
     <PeoplePresent peoplePresent={5} />
     <Divider />

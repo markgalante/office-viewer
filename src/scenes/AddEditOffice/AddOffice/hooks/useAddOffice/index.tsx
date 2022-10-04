@@ -40,8 +40,7 @@ export function useAddOffice(): UseAddOfficeResult{
         console.error('Error creating office');
         hideOverlay();
       },
-      onSuccess: (res, variables) => {
-        console.log(res, variables);
+      onSuccess: () => {
         hideOverlay();
       },
       onMutate: () => {
