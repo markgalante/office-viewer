@@ -17,14 +17,22 @@ function NameAndEdit({
   onEditPress,
   officeId,
 }: NameAndEditProps){
-  const {navigateOfficeView} = useRouting();
-  const navToOffice = () => navigateOfficeView(officeId);
+  const {
+    navigateOfficeView,
+    params,
+  } = useRouting();
+
+  const navToOffice = () => {
+    if(!params?.uid){
+      navigateOfficeView(officeId);
+    }
+  };
   return (
     <Flex
       alignItems='center'
       justify='space-between'
     >
-      <div onClick={navToOffice} className='curser-pointer'>
+      <div onClick={navToOffice} className={!params?.uid ? 'curser-pointer' : ''}>
         <Text type='bold-heading'>
           {companyName}
         </Text>
