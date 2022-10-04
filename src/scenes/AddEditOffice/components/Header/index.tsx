@@ -2,18 +2,23 @@ import * as React from 'react';
 import {
   Icon,
   Text,
-  Flex
 } from '../../../../components';
-import './styles.css'
+import './styles.css';
+import {useRouting} from '../../../../hooks';
 
-function Header(){
+type HeaderProps = {
+  title?: string;
+}
+
+function Header({
+  title = 'New Office'
+}: HeaderProps){
+  const {goBack} = useRouting();
   return (
-    <Flex alignItems='center'>
-      <Icon name='back' size={50} />
-      <div className='text-container'>
-      <Text center type='sub-heading'>New Office</Text>
-      </div>
-    </Flex>
+    <div className='header-container'>
+      <Icon name='back' size={24} className='curser-pointer header-icon' onClick={goBack} />
+      <Text center type='sub-heading'>{title}</Text>
+    </div>
   )
 };
 

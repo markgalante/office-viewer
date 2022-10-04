@@ -7,6 +7,8 @@ function IconRenderer({
   size = 24,
 }: IconProps){
   switch(name){
+    case 'add': 
+      return <Icon.Add size={size} />
     case 'back':
       return <Icon.Back size={size} />
     case  'edit':

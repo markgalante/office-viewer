@@ -1,4 +1,3 @@
-import * as React from 'react';
 import {
   collection, addDoc,
 } from 'firebase/firestore';
@@ -11,7 +10,7 @@ import {
 import {
   useMutation,
 } from '@tanstack/react-query';
-import {OfficeType} from '../../../types';
+import type {OfficeType} from '../../../types';
 
 function handleAddOffice(office: OfficeType){
   return addDoc(

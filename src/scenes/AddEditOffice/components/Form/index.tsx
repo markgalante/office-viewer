@@ -103,11 +103,12 @@ function Form({
         flexWrap='wrap'
       >
       {
-        colorThemes.map(colorTheme => (
+        colorThemes.map((colorTheme, idx) => (
           <ColorThemePicker
             color={colorTheme}
             setColor={setColor}
-            selectedColor={officeColor}  
+            selectedColor={officeColor}
+            key={idx}  
           />
         ))
       }

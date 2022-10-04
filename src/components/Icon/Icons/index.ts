@@ -1,3 +1,4 @@
+import Add from "./Add";
 import Back from "./Back";
 import Edit from "./Edit";
 import Email from "./Email";
@@ -9,6 +10,7 @@ import Phone from './Phone';
 import LocationPin from './LocationPin';
 
 export {
+  Add,
   ArrowDown,
   ArrowUp,
   Back,
