@@ -6,6 +6,7 @@ type TextTypes =
   | 'sub-heading'
   | 'section-header'
   | 'bold-heading'
+  | 'screen-header';
 
 type TextAlignTypes =
   | 'align-left'

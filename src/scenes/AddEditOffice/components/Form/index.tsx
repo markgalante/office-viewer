@@ -96,11 +96,12 @@ function Form({
         value={maximumCapacity}
         {...commonTextFieldProps}
       />
-      <Text type='section-header'>Office Colour</Text>
+      <Text type='section-header' className='office-colour-header'>Office Colour</Text>
       <Flex
         alignItems='center'
         justify='space-around'
         flexWrap='wrap'
+        gap={23}
       >
       {
         colorThemes.map((colorTheme, idx) => (

@@ -10,7 +10,6 @@ import PeoplePresent from '../PeoplePresent';
 import ExpandedCompanyInfo from '../ExpandedCompanyInfo';
 
 type BasicCompanyInfoProps = {
-  companyName: string;
   heightClassName: string;
   onExpandCompressClick: () => void;
   isExpanded: boolean;
@@ -18,12 +17,14 @@ type BasicCompanyInfoProps = {
 }
 
 function BasicCompanyInfo({
-  companyName,
   heightClassName,
   onExpandCompressClick,
   isExpanded,
   office,
 }: BasicCompanyInfoProps){
+  const {
+    name, id, phoneNumber, emailAddress, address, maximumCapacity,
+  } = office;
   return(
     <div
     className={`card-info-container ${heightClassName}`}
@@ -33,8 +34,8 @@ function BasicCompanyInfo({
     flexDirection='column'
   >
     <NameAndEdit 
-      companyName={companyName}
-      officeId={office.id}
+      companyName={name}
+      officeId={id}
       onEditPress={() => null}
     />
     <PeoplePresent peoplePresent={5} />
@@ -47,10 +48,10 @@ function BasicCompanyInfo({
     {
       isExpanded ? (
         <>
-          <ExpandedCompanyInfo icon='phone' info={office.phoneNumber} />
-          <ExpandedCompanyInfo icon='email' info={office.emailAddress} />
-          <ExpandedCompanyInfo icon='people-present' info={`Office Capacity: ${office.maximumCapacity}`} />
-          <ExpandedCompanyInfo icon='location-pin' info={office.address}/>
+          <ExpandedCompanyInfo icon='phone' info={phoneNumber} />
+          <ExpandedCompanyInfo icon='email' info={emailAddress} />
+          <ExpandedCompanyInfo icon='people-present' info={`Office Capacity: ${maximumCapacity}`} />
+          <ExpandedCompanyInfo icon='location-pin' info={address}/>
         </>
       ) : null
     }

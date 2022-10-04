@@ -19,11 +19,10 @@ function ColorThemePicker({
   return (
   <div 
     style={{
-      width: 60,
-      height: 60,
+      width: isSelected ? 30 : 36,
+      height: isSelected ? 30 : 36,
       borderRadius: '50%',
       backgroundColor: color,
-      margin: 12, 
       border: isSelected ? '4px solid #475569' : 'none'
     }}
     onClick={handleColorClick}

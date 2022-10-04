@@ -1,14 +1,14 @@
 .add-office-button {
   border-radius: 100px;
   font-family: inter-400, 'Times New Roman', Times, serif;
-  height: 3.4em;
-  width: 16.5em;
+  height: 48px;
+  width: 232px;
   margin: 24px;
   background: #489DDA;
   border: none;
   color: #F8FAFC;
   text-transform: uppercase;
-  font-size: large;
+  font-size: 14px;
 }
 
 .add-office-button:active {
@@ -16,4 +16,8 @@
   border: 1px solid #489DDA;
   border-width: 1px;
   color: #489DDA;
+}
+
+.office-colour-header {
+  margin: 1em 0;
 }
