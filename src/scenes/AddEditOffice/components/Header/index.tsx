@@ -16,7 +16,7 @@ function Header({
   const {goBack} = useRouting();
   return (
     <div className='header-container'>
-      <Icon name='back' size={50} className='curser-pointer header-icon' onClick={goBack} />
+      <Icon name='back' size={24} className='curser-pointer header-icon' onClick={goBack} />
       <Text center type='sub-heading'>{title}</Text>
     </div>
   )
