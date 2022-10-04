@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './styles.css';
 import IconRenderer from './components/IconRenderer';
 import type {
   IconProps,
