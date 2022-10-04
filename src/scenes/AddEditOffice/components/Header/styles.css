@@ -1,3 +1,14 @@
 .text-container {
   width: 100%;
 }
+
+.header-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.header-container {
+  position: relative;
+  margin: 2em 0;
+}

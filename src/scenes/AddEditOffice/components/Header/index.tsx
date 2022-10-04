@@ -2,7 +2,6 @@ import * as React from 'react';
 import {
   Icon,
   Text,
-  Flex
 } from '../../../../components';
 import './styles.css';
 import {useRouting} from '../../../../hooks';
@@ -16,12 +15,10 @@ function Header({
 }: HeaderProps){
   const {goBack} = useRouting();
   return (
-    <Flex alignItems='center'>
-      <Icon name='back' size={50} className='curser-pointer' onClick={goBack} />
-      <div className='text-container'>
+    <div className='header-container'>
+      <Icon name='back' size={50} className='curser-pointer header-icon' onClick={goBack} />
       <Text center type='sub-heading'>{title}</Text>
-      </div>
-    </Flex>
+    </div>
   )
 };
 
