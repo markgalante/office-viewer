@@ -1,24 +1,30 @@
 .main-card-container {
-  width: 342px;
+  width: 100%;
   position: relative;
   overflow: auto;
   border: 1px solid #E8F3FC;
 }
 
 .card-color-container {
-  width: 157.85px;
+  width: 50%;
   position: absolute;
   left: 0;
   top: 0;
 }
 
 .card-info-container{
-  width: 328px;
+  width: 95%;
   position: absolute;
   right: 0;
   top: 0;
   z-index: 1;
   background: #E8F3FC;
+}
+
+@media only screen and (min-width: 768px) {
+  .card-info-container{
+    width: 99%;
+  }
 }
 
 .card-height {
