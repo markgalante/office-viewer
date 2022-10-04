@@ -8,6 +8,7 @@
   position: fixed;
   bottom: 17px;
   right: 17px;
+  cursor: pointer;
 }
 
 .add-button:active{
